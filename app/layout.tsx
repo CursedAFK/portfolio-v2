@@ -1,4 +1,5 @@
 import { Open_Sans } from 'next/font/google'
+import Sidebar from './components/Sidebar/Sidebar'
 import './globals.scss'
 
 interface Props {
@@ -21,7 +22,10 @@ const openSans = Open_Sans({
 const RootLayout = ({ children }: Props) => {
   return (
     <html lang='en' className={`${openSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Sidebar />
+        {children}
+      </body>
     </html>
   )
 }

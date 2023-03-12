@@ -1,0 +1,26 @@
+@import '../../../variables';
+
+.container {
+  color: unset;
+  text-decoration: none;
+
+  li {
+    border-top: 0.05vw solid rgba($color: #fff, $alpha: 0.15);
+    opacity: 0.6;
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding: 1vw;
+    transition: color 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+
+    &:last-child {
+      border-bottom: 0.05vw solid rgba($color: #fff, $alpha: 0.15);
+    }
+
+    &:hover,
+    &.active {
+      color: $secondaryColor;
+      opacity: 1;
+    }
+  }
+}
