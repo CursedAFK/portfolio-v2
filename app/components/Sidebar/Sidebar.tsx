@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import styles from './Sidebar.module.scss'
 import SidebarLink from './SidebarLinks/SidebarLink'
-import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaLinkedinIn, FaGithub, FaTwitter, FaTimes } from 'react-icons/fa'
+import { IoMdClose } from 'react-icons/io'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -52,6 +53,8 @@ const Sidebar = () => {
             <p>Front End Developer</p>
           </header>
 
+          <IoMdClose onClick={() => setIsModalOpen(false)} />
+
           <nav>
             <ul>
               {pages.map(page => (
@@ -86,7 +89,7 @@ const Sidebar = () => {
       </AnimatePresence>
 
       <aside className={styles.subContainer}>
-        <GiHamburgerMenu onClick={() => setIsModalOpen(prev => !prev)} />
+        <GiHamburgerMenu onClick={() => setIsModalOpen(true)} />
       </aside>
     </>
   )
