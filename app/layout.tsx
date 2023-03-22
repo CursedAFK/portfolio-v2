@@ -1,4 +1,5 @@
 import { Open_Sans } from 'next/font/google'
+import MouseStalker from './components/MouseStalker/MouseStalker'
 import Sidebar from './components/Sidebar/Sidebar'
 import './globals.scss'
 
@@ -25,6 +26,7 @@ const RootLayout = ({ children }: Props) => {
       <body>
         <Sidebar />
         {children}
+        <MouseStalker />
       </body>
     </html>
   )
