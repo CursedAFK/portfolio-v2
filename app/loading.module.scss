@@ -1,0 +1,29 @@
+@import './variables';
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #1d1d1d;
+
+	h1 {
+		font-size: 6.5vw;
+		font-weight: 800;
+		color: $primaryColor;
+		text-shadow: -0.6vw 0 0 $secondaryColor;
+
+		@media screen and (max-width: 1000px) {
+		}
+	}
+
+	h2 {
+		font-size: 1.5vw;
+		font-weight: 600;
+
+		@media screen and (max-width: 1000px) {
+		}
+	}
+}

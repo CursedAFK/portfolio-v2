@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import styles from './page.module.scss'
+import { delay } from './utils/delay'
 
-const Home = () => {
+const Home = async () => {
+	await delay
+
 	return (
 		<div className={styles.container}>
 			<h1>
